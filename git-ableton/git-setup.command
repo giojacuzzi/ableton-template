@@ -1,5 +1,5 @@
 #! /bin/zsh -f
-cd $0:h
+cd $0:h/..
 
 hook=.git/hooks/pre-commit
 gzip='zcat -f'

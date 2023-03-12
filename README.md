@@ -5,7 +5,7 @@ A git repository template for Ableton Live projects
 - [git lfs](https://git-lfs.com/) for storing audio files
 
 ## Instructions
-- Run `git-setup.command` before using this repository for an Ableton Live project
+- Run `git-ableton/git-setup.command` before using this repository for an Ableton Live project
 
 ---
 
