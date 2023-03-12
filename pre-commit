@@ -1,0 +1,10 @@
+#! /bin/zsh -f
+
+# Uncompress any Ableton Live set/s
+git diff --cached --name-only --diff-filter=ACM | grep .als |
+while read
+do zcat -qf < $REPLY > .tmp && mv .tmp $REPLY && git add $_
+done
+
+# TODO?
+# Decompile binary .asd

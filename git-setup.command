@@ -11,10 +11,9 @@ git config diff.gzip.command $gzip
 #git config include.path ../.gitconfig #mv -f {,.git/}config
 
 mkdir -p $hook:h #&& ln -s {../../.,$_/}$hook:t #mv {,$_/}$hook:t
-git show master:$hook:t >> $hook && chmod +x $hook
+git show main:$hook:t >> $hook && chmod +x $hook
 #git config core.hooksPath .
 
 git lfs install
 
-killall Terminal
 exit
