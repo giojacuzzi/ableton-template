@@ -2,29 +2,29 @@
 
 # Ableton files
 *.als filter=gzip diff=gzip
-*.als    linguist-vendored
-*.asd    lfs
+*.als linguist-vendored
+*.asd lfs
 
 # Audio files
-*.aac    lfs
-*.aif    lfs
-*.aiff   lfs
-*.flac   lfs
-*.m4a    lfs
-*.m4p    lfs
-*.mp3    lfs
-*.ogg    lfs
-*.wav    lfs
-*.w4v    lfs
-*.wma    lfs
+*.aac  lfs
+*.aif  lfs
+*.aiff lfs
+*.flac lfs
+*.m4a  lfs
+*.m4p  lfs
+*.mp3  lfs
+*.ogg  lfs
+*.wav  lfs
+*.w4v  lfs
+*.wma  lfs
 
 # Video files
-*.mov    lfs
-*.wmv    lfs
-*.mp4    lfs
+*.mov  lfs
+*.wmv  lfs
+*.mp4  lfs
 
 # Image files
-*.jpg    lfs
-*.jpeg   lfs
-*.png    lfs
-*.svg    lfs
+*.jpg   lfs
+*.jpeg  lfs
+*.png   lfs
+*.svg   lfs
