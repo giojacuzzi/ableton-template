@@ -1,11 +1,18 @@
 # ableton-template
-A git repository template for Ableton Live projects
+A git repository template for managing Ableton Live projects
 
 ## Prerequisites
-- [git lfs](https://git-lfs.com/) for storing audio files
+- [git lfs](https://git-lfs.com/) for storing audio/binary files
+    - `brew install git-lfs`
+- [xmlstarlet](https://xmlstar.sourceforge.net/download.php) for generating version and plugin `dependencies.md` (optional)
+    - `brew install xmlstarlet`
 
-## Instructions
+## Setup
 - Run `git-ableton/git-setup.command` before using this repository for an Ableton Live project
+- Create/copy your Ableton Live project folder into this directory
+
+## Committing
+- Always use [Collect All and Save](https://help.ableton.com/hc/en-us/articles/209775645-Collect-All-and-Save)
 
 ---
 
