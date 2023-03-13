@@ -1,7 +1,7 @@
 # ableton-template
 A git repository template for managing Ableton Live projects
 
-## Prerequisites
+### Prerequisites
 - [zcat](https://linux.die.net/man/1/zcat) for managing Ableton Live Set files
     - This should come pre-installed on MacOS
 - [git lfs](https://git-lfs.com/) for storing audio/binary files
@@ -9,11 +9,11 @@ A git repository template for managing Ableton Live projects
 - [xmlstarlet](https://xmlstar.sourceforge.net/download.php) for generating version and plugin `dependencies.md` (optional)
     - `brew install xmlstarlet`
 
-## Setup
+### Setup
 - Run `git/setup.command` before using this repository for an Ableton Live project
 - Create/copy your Ableton Live project folder into this directory
 
-## Committing
+### Committing
 - Always use [Collect All and Save](https://help.ableton.com/hc/en-us/articles/209775645-Collect-All-and-Save)
 
 ---
