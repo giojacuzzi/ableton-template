@@ -6,7 +6,7 @@ git lfs install
 # Install pre-commit hook
 cp git/pre-commit .git/hooks && chmod +x .git/hooks/pre-commit
 
-# Configure .als files in working tree to unzip as XML on checkout
+# Configure .als files in working tree to unzip as XML on checkout (see .gitattributes)
 gzip='zcat -f'
 git config filter.gzip.smudge $gzip
 git config filter.gzip.clean $gzip
