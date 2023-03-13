@@ -18,7 +18,7 @@ rm dependencies.md
 
 # Print the name of the als file
 ALS=$(grep -lr -E --include='*.als' --exclude-dir='*/Backup' .)
-if [ -z "$var" ]
+if [ -z "$ALS" ]
 then
   echo 'ERROR: no .als file found' >&2
   echo "Run git/dependencies.command to generate this file" > dependencies.md
