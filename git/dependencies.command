@@ -3,7 +3,7 @@ cd $0:h/..
 
 if ! [ -x "$(command -v xml)" ]; then
   echo 'ERROR: xmlstarlet is not installed' >&2
-  echo "Run `git/dependencies.command` to generate this file" > dependencies.md
+  echo "Run git/dependencies.command to generate this file" > dependencies.md
   exit 0
 fi
 
@@ -21,7 +21,7 @@ ALS=$(grep -lr -E --include='*.als' --exclude-dir='*/Backup' .)
 if [ -z "$var" ]
 then
   echo 'ERROR: no .als file found' >&2
-  echo "Run `git/dependencies.command` to generate this file" > dependencies.md
+  echo "Run git/dependencies.command to generate this file" > dependencies.md
   exit 0
 else
   echo Path: $ALS
