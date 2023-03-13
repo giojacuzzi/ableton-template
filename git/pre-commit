@@ -1,6 +1,6 @@
 #! /bin/zsh -f
 
-# Uncompress Ableton Live set
+# Uncompress .als
 git diff --cached --name-only --diff-filter=ACM | grep .als |
 while read
 do zcat -qf < $REPLY > .tmp && mv .tmp $REPLY && git add $_

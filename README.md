@@ -2,6 +2,8 @@
 A git repository template for managing Ableton Live projects
 
 ## Prerequisites
+- [zcat](https://linux.die.net/man/1/zcat) for managing Ableton Live Set files
+    - This should come pre-installed on MacOS
 - [git lfs](https://git-lfs.com/) for storing audio/binary files
     - `brew install git-lfs`
 - [xmlstarlet](https://xmlstar.sourceforge.net/download.php) for generating version and plugin `dependencies.md` (optional)
@@ -16,4 +18,8 @@ A git repository template for managing Ableton Live projects
 
 ---
 
-_Adapted from [danielbayley's Ableton Live Tools](https://github.com/danielbayley/Ableton-Live-tools)_
+## Notes
+
+An Ableton Live Set `.als` file is actually xml compressed with gzip. Ableton Live can open an uncompressed als file, and will just compress it again on save. We can use gitattributes filters and a hook to uncompress on checkout and pre-commit, ensuring that only the (non-binary) xml is committed. This makes diffs and conflict merging (i.e. concurrent production) possible. However, because an als file stores some plugin data in binary, note that merging is limited (if multiple musicians change a plugin, one will ultimately lose their work).
+
+_Inspired by [Mark Henry's experiment](https://medium.com/@mark_henry/ableton-live-git-a-match-made-in-someplace-or-the-great-ableton-git-experiment-5a20dfe2734c) and [danielbayley's Ableton Live Tools](https://github.com/danielbayley/Ableton-Live-tools)_
