@@ -1,6 +1,11 @@
 #! /bin/zsh -f
 cd $0:h/..
 
+if ! [ -x "$(command -v xml)" ]; then
+  echo 'ERROR: xmlstarlet is not installed' >&2
+  exit 1
+fi
+
 # Uncompress any Ableton Live set(s)
 git diff --cached --name-only --diff-filter=ACM | grep .als |
 while read
@@ -13,7 +18,13 @@ echo "# Dependencies" > dependencies.md
 
 # Print the name of the als file
 ALS=$(grep -lr -E --include='*.als' --exclude-dir='*/Backup' .)
-echo Path: $ALS
+if [ -z "$var" ]
+then
+  echo 'ERROR: no .als file found' >&2
+  exit 1
+else
+    echo Path: $ALS
+fi
 
 VERSION=$(xml sel -t -v '/Ableton/@Creator' "$ALS")
 echo Version: $VERSION
