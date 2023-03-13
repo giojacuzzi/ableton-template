@@ -8,7 +8,7 @@ A git repository template for managing Ableton Live projects
     - `brew install xmlstarlet`
 
 ## Setup
-- Run `git-ableton/git-setup.command` before using this repository for an Ableton Live project
+- Run `git/setup.command` before using this repository for an Ableton Live project
 - Create/copy your Ableton Live project folder into this directory
 
 ## Committing

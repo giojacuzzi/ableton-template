@@ -3,7 +3,8 @@ cd $0:h/..
 
 if ! [ -x "$(command -v xml)" ]; then
   echo 'ERROR: xmlstarlet is not installed' >&2
-  exit 1
+  echo "Run `git/dependencies.command` to generate this file" > dependencies.md
+  exit 0
 fi
 
 # Uncompress any Ableton Live set(s)
@@ -12,18 +13,19 @@ while read
 do zcat -qf < $REPLY > .tmp && mv .tmp $REPLY && git add $_
 done
 
-# Overwrite old dependencies.md
+# Remove old dependencies.md
 rm dependencies.md
-echo "# Dependencies" > dependencies.md
 
 # Print the name of the als file
 ALS=$(grep -lr -E --include='*.als' --exclude-dir='*/Backup' .)
 if [ -z "$var" ]
 then
   echo 'ERROR: no .als file found' >&2
-  exit 1
+  echo "Run `git/dependencies.command` to generate this file" > dependencies.md
+  exit 0
 else
-    echo Path: $ALS
+  echo Path: $ALS
+  echo "# Dependencies" > dependencies.md
 fi
 
 VERSION=$(xml sel -t -v '/Ableton/@Creator' "$ALS")

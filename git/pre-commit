@@ -7,4 +7,4 @@ do zcat -qf < $REPLY > .tmp && mv .tmp $REPLY && git add $_
 done
 
 # Generate dependencies.md
-git-ableton/dependencies.command
+git/dependencies.command
