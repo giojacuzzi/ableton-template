@@ -22,4 +22,6 @@ A git repository template for managing Ableton Live projects
 
 An Ableton Live Set `.als` file is actually xml compressed with gzip. Ableton Live can open an uncompressed als file, and will just compress it again on save. We can use gitattributes filters and a hook to uncompress on checkout and pre-commit, ensuring that only the (non-binary) xml is committed. This makes diffs and conflict merging (i.e. concurrent production) possible. However, because an als file stores some plugin data in binary, note that merging is limited (if multiple musicians change a plugin, one will ultimately lose their work).
 
+Running `git/setup.command` will initialize git lfs, configure .als files in the working tree to uncompress as xml on checkout, and install the pre-commit hook. In addition to uncompressing as xml before commit, this hook will attempt to automatically generate `dependencies.md` with `git/dependencies.command`. This parses the xml to retrieve the required Ableton Live version and any third-party plugins used in the Live Set.
+
 _Inspired by [Mark Henry's experiment](https://medium.com/@mark_henry/ableton-live-git-a-match-made-in-someplace-or-the-great-ableton-git-experiment-5a20dfe2734c) and [danielbayley's Ableton Live Tools](https://github.com/danielbayley/Ableton-Live-tools)_
