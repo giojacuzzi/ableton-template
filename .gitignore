@@ -1,6 +1,8 @@
 .DS_Store
-Icon?
 
-#Ableton Project Info/
+# Ableton folders
 Backup/
-#Samples/
+
+# Ableton files
+Icon?
+*.asd

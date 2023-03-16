@@ -3,7 +3,6 @@
 # Ableton files
 *.als filter=gzip diff=gzip
 *.als linguist-vendored
-*.asd lfs
 
 # Audio files
 *.aac  lfs
